@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .main {
+        @apply
+        /* Mobile */
+        w-screen h-[100dvh] m-0 p-4
+    }
+
+    .form {
+        @apply
+        /* Mobile */
+        w-full flex flex-col place-content-center place-items-center gap-10
+    }
+
+    .input {
+        @apply
+        /* Mobile */
+        w-full border-2 border-gray-900 rounded pl-2 outline-none
+        focus:border-green-500
+    }
+
+    .button {
+        @apply
+        /* Mobile */
+        outline-none bg-green-400 font-bold text-xl text-white py-2 px-4 w-24 rounded
+    }
+}
