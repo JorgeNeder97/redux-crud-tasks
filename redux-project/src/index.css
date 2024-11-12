@@ -15,11 +15,31 @@
         w-full flex flex-col place-content-center place-items-center gap-10
     }
 
+    .input-group {
+        @apply
+        /* Mobile */
+        w-full flex flex-col 
+    }
+
     .input {
         @apply
         /* Mobile */
         w-full border-2 border-gray-900 rounded pl-2 outline-none
         focus:border-green-500
+    }
+
+    .error {
+        @apply
+        /* Mobile */
+        text-red-500 text-sm opacity-100 h-[30px]
+
+        transition-all duration-[.5s] ease-in-out
+    }
+
+    .hidden-error {
+        @apply
+        /* Mobile */
+        opacity-0 h-[30px]
     }
 
     .button {
