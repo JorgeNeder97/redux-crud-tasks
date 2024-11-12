@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Task } from '#models/Task.ts';
 
 
@@ -21,10 +21,12 @@ export const taskSlice = createSlice({
     name: 'tasks',
     initialState,
     reducers: {
-
+        addTask: (state, action: PayloadAction<string>) => {
+            console.log(state, action);
+        }
     }
 });
 
-
+export const { addTask } = taskSlice.actions;
 
 export default taskSlice.reducer;
