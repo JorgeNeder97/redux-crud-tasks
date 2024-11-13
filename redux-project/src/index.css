@@ -6,9 +6,30 @@
     .main {
         @apply
         /* Mobile */
-        w-screen h-[100dvh] m-0 p-4
+        w-screen min-h-[100dvh] m-0 p-4 bg-slate-300
+        dark:bg-zinc-900
+    }
+    
+    .main-title {
+        @apply
+        /* Mobile */
+        w-full relative pr-8 mb-11 text-center bg-clip-text text-transparent text-5xl font-bold font-kanit
+        bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700
+
+        dark:bg-gradient-to-br dark:from-slate-400 dark:via-slate-200 dark:to-slate-300
     }
 
+    /* TaskList component start */
+    .list-container {
+        @apply
+        /* Mobile */
+        w-full flex flex-col min-h-[70dvh] px-4 py-4
+        border-2 border-slate-500 bg-slate-400/50 rounded
+        dark:border-slate-500 dark:bg-zinc-800/50
+    }
+
+
+    /* TaskForm component start */
     .form {
         @apply
         /* Mobile */
@@ -47,4 +68,8 @@
         /* Mobile */
         outline-none bg-green-400 font-bold text-xl text-white py-2 px-4 w-24 rounded
     }
+
+    /* TaskForm component end */
+
+
 }
